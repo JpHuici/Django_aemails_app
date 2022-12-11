@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import DashboardHomeView, NewslettersDashboardHomeView, NewslettersCreateView, NewslettersDetailView, NewslettersUpdateView
+from .views import (DashboardHomeView, NewslettersDashboardHomeView, NewslettersCreateView, NewslettersDetailView, NewslettersUpdateView)
 
 app_name = "dashboard"
 

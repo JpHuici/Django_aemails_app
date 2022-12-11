@@ -19,7 +19,7 @@ class NewslettersDashboardHomeView(View):
         return render(request, 'dashboard/list.html', context)
 
 
-class NewsletterCreateView(View):
+class NewslettersCreateView(View):
     def get(self, request, *args, **kwargs):
         form=NewsletterCreationForm()
         context={
@@ -51,7 +51,7 @@ class NewsletterCreateView(View):
         return render(request, 'dashboard/create.html', context)
 
 
-class NewsletterDetailView(View):
+class NewslettersDetailView(View):
     def get(self, request, pk,*args, **kwargs):
         newsletter=get_object_or_404(Newsletter,pk=pk)
         context={
@@ -60,7 +60,7 @@ class NewsletterDetailView(View):
         return render(request, 'dashboard/detail.html', context)
 
 
-class NewsletterUpdateView(UpdateView):
+class NewslettersUpdateView(UpdateView):
     model=Newsletter
     form_class=NewsletterCreationForm
     template_name='dashboard/update.html'
@@ -100,7 +100,7 @@ class NewsletterUpdateView(UpdateView):
         return render(request, 'dashboard/update.html', context)
 
 
-class NewsletterDeleteView(DeleteView):
+class NewslettersDeleteView(DeleteView):
     model=Newsletter
     template_name='dashboard/delete.html'
     success_url='/dashboard/list/'
