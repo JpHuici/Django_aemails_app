@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'dashboard',
 ]
 
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+NPM_BIN_PATH = r"C:\Program Files\nodejs"
 
 
 TAILWIND_APP_NAME = 'theme'
